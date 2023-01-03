@@ -14,9 +14,11 @@ html {
 .flex {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .btn_o {
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
     background: transparent;
     border: none;
     outline: none;
