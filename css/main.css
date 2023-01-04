@@ -1,11 +1,23 @@
 body {
-    background: #3b404c;
+    background: #343434;
     color: #f6f6f6;
     font-size: 1.6rem;
+    word-break: keep-all;
 }
 
 .mc {
     color: #e0bd76;
+}
+
+.m_bg {
+    background: #222;
+}
+
+h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 /* seting css*/
@@ -17,9 +29,9 @@ body {
     right: 0;
     z-index: 999;
 
-    background: #3b404c;
+    background: #343434;
     line-height: 100px;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 .header img {
@@ -60,9 +72,9 @@ body {
 }
 
 .mainVisual h2 {
-    font-size: 5rem;
     font-weight: 900;
     letter-spacing: 1px;
+    text-align: left;
     margin-bottom: 15px;
 }
 
@@ -119,14 +131,6 @@ body {
 }
 
 /* main visual */
-
-.mainEvent h2 {
-    font-size: 50px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
 .mainEvent .inner ul {
     gap: 30px;
 }
@@ -149,34 +153,28 @@ body {
 .mainEvent ul strong {
     display: block;
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 
 .mainEvent ul p {
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 300;
-    word-break: keep-all;
     line-height: 1.45;
 }
 
 /* main event */
-.mainConcept img {
-    width: 100%;
+.mainConcept .inner {
+    position: relative;
 }
 
-.mainConcept h2 {
-    font-size: 50px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.mainConcept .tab_concept_menu button {
+.mainConcept .tab_concept_menu ul>li button {
     position: relative;
     filter: grayscale(1);
+    transition: 0.3s;
 }
 
-.mainConcept .tab_concept_menu button:hover {
+.mainConcept .tab_concept_menu ul>li.on button,
+.mainConcept .tab_concept_menu ul>li button:hover {
     filter: grayscale(0);
 }
 
@@ -235,9 +233,140 @@ body {
 }
 
 .mainConcept .tab_concept_slide ul>li {
-    display: none;
+    height: 0;
+    overflow: hidden;
 }
 
 .mainConcept .tab_concept_slide ul>li.on {
+    height: 100%;
+}
+
+.mainConcept .controller {
+    position: absolute;
+    top: calc((100% - 54px) / 2);
+    right: 0;
+    width: 940px;
+}
+
+.mainConcept .controller ul {
+    justify-content: space-between;
+    font-size: 3rem;
+    color: #555;
+    text-shadow: 0 0 1px #fff;
+    margin: 0 20px;
+}
+
+.mainConcept .controller ul li {
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* main concept */
+
+.mainProfile>p {
     display: block;
+    margin-bottom: 50px;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.mainProfile ul {
+    gap: 30px;
+}
+
+.mainProfile ul>li {
+    flex: 1;
+    border-bottom: 1px solid #a58850;
+}
+
+.mainProfile ul>li figure {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 30px;
+}
+
+.mainProfile ul>li figure img {
+    position: absolute;
+    top: -150px;
+    left: 0;
+}
+
+.mainProfile ul>li:nth-child(1) figure img {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 450px;
+}
+
+.mainProfile ul>li * {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.mainProfile ul>li strong {
+    font-size: 2.4rem;
+}
+
+.mainProfile ul>li p {
+    font-size: 1.5rem;
+    line-height: 1.45;
+}
+
+/* main profile */
+.mainRequest h2 {
+    margin-bottom: 30px;
+}
+
+.mainRequest p {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.45;
+}
+
+.mainRequest button {
+    display: block;
+    margin: 0 auto;
+}
+
+.mainRequest a {
+    display: block;
+    padding: 5px 20px 7px 20px;
+    font-size: 18px;
+    border: 1px solid #e0bd76;
+    text-align: center;
+}
+
+/* main request */
+.footer {
+    padding: 30px 0;
+    background: #333;
+}
+
+.footer .foot_top {
+    justify-content: space-between;
+}
+
+.footer .foot_t_left {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.footer .foot_t_left li~li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: #ddd;
+    margin: 0 20px;
+}
+
+.foot_t_right {
+    font-size: 20px;
+    gap: 7px;
 }
