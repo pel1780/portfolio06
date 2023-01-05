@@ -1,4 +1,8 @@
 $(function () {
+    $('.header button').on('click', function () {
+        $('.header').toggleClass('on');
+    });
+
     $('.main_visual_slide').slick({
         arrows: false,
         autoplay: true,

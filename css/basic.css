@@ -33,3 +33,24 @@ img {
 * {
     outline: 1px solid t-omato;
 }
+
+@media(max-width: 768px) {
+    html {
+        font-size: 7px;
+    }
+
+    .sec {
+        padding: 85px 0;
+    }
+
+    .inner {
+        width: auto;
+        margin: 0 15px;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
