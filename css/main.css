@@ -55,8 +55,9 @@ h2 {
     top: 101px;
     left: 0;
     right: 0;
-    background: #343434;
     height: 0;
+    background: #343434;
+    border-bottom: 1px solid #555;
     overflow: hidden;
     transition: 0.45s;
 }
@@ -213,8 +214,12 @@ h2 {
     bottom: 50px;
     left: 50%;
     transform: translate(-50%, 0);
-    font-size: 20px;
-    text-shadow: 0 0 1px #fff;
+}
+
+.mainVisual .scroll_down button {
+    font-size: 24px;
+    font-weight: 300;
+    text-shadow: 0 0 1px #ddd;
 }
 
 @media(max-width: 768px) {
@@ -322,6 +327,8 @@ h2 {
     transform: translate(0, -50%) rotate(-90deg);
 
     color: #555;
+    font-weight: 500;
+    text-shadow: 0 0 1px #fff;
 }
 
 .mainConcept .tab_concept_menu li:nth-child(1) strong {
@@ -334,7 +341,7 @@ h2 {
 
 .mainConcept .tab_concept_menu li:nth-child(4) strong {
     left: 7px;
-    color: #ddd;
+    /* color: #ddd; */
 }
 
 .mainConcept .tab_concept_menu .img_case {
@@ -381,6 +388,7 @@ h2 {
 .mainConcept .controller {
     position: absolute;
     top: calc((100% - 54px) / 2);
+    transform: translate(0, -50%);
     right: 0;
     width: 940px;
 }
@@ -394,8 +402,13 @@ h2 {
 }
 
 .mainConcept .controller ul li {
-    padding: 6px;
+    padding: 6px 8px 6px 4px;
     background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+.mainConcept .controller ul li:nth-child(2) {
+    padding: 6px 4px 6px 8px;
 }
 
 @media(max-width: 768px) {
@@ -490,7 +503,7 @@ h2 {
     .mainConcept .controller ul {
         flex-direction: row;
         font-size: 24px;
-        margin: 0 0;
+        margin: 0 10px;
     }
 }
 
@@ -682,7 +695,7 @@ h2 {
     background: rgba(0, 0, 0, 0.5);
     padding: 7px;
     color: #f6f6f6;
-    border-radius: 7px 7px 0 0;
+    border-radius: 50%;
 
     opacity: 0;
     visibility: hidden;

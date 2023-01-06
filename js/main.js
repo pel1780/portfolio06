@@ -13,7 +13,7 @@ $(function () {
 
     $('.scroll_down a').on('click', function (event) {
         event.preventDefault();
-        $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+        $('html, body').animate({ scrollTop: $(this.hash).offset().top - 100 }, 1000);
     })
 
     $('.tab_slide').slick({

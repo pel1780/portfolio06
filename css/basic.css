@@ -30,6 +30,13 @@ img {
     width: 100%;
 }
 
+.slick-list,
+.slick-trank {
+    transition-delay: 30ms;
+}
+
+/* slick 깜빡임 막기 */
+
 * {
     outline: 1px solid t-omato;
 }
