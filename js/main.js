@@ -11,10 +11,30 @@ $(function () {
         pauseOnFocus: false,
     }); //메인 슬라이드
 
+    $('.mainVisual .prev').on('click', function () {
+        $('.main_visual_slide').slick('slickPrev');
+    });
+    $('.mainVisual .next').on('click', function () {
+        $('.main_visual_slide').slick('slickNext');
+    });
+    $('.mainVisual .pause').on('click', function () {
+        $(this).toggleClass('on');
+        if ($(this).hasClass('on')) {
+            $('.main_visual_slide').slick('slickPause');
+            $('.mainVisual .pause i').removeClass('xi-pause');
+            $('.mainVisual .pause i').addClass('xi-play');
+        } else {
+            $('.main_visual_slide').slick('slickPlay');
+            $('.mainVisual .pause i').removeClass('xi-play');
+            $('.mainVisual .pause i').addClass('xi-pause');
+        }
+
+    });
+
     $('.scroll_down a').on('click', function (event) {
         event.preventDefault();
         $('html, body').animate({ scrollTop: $(this.hash).offset().top - 100 }, 1000);
-    })
+    });
 
     $('.tab_slide').slick({
         arrows: false,
